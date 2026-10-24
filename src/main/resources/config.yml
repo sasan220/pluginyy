@@ -1,0 +1,104 @@
+# ------------------------------------------------------------
+#  Generatory – konfiguracja
+#  Teksty używają formatu MiniMessage: https://docs.advntr.dev/minimessage/format.html
+# ------------------------------------------------------------
+
+odnawianie:
+  # Co ile sekund odnawiają się wszystkie generatory (można też zmienić w GUI)
+  co-ile-sekund: 120
+  # true  = uzupełniane są tylko wykopane (puste) miejsca
+  # false = cały generator jest losowany od nowa
+  tylko-puste-miejsca: false
+  # Ile bloków maksymalnie zmieniać w jednym ticku (mniej = mniejsze lagi przy dużych generatorach)
+  blokow-na-tick: 20000
+  # Przenosi graczy stojących w środku generatora na jego górę przed odnowieniem
+  teleportuj-graczy: true
+  # Pomija niezaładowane chunki (oszczędza wydajność serwera)
+  pomijaj-niezaladowane-chunki: true
+  # Dźwięk dla graczy widzących pasek po odnowieniu ("" = brak)
+  dzwiek: "minecraft:block.note_block.pling"
+
+bossbar:
+  wlaczony: true
+  # Kto widzi pasek: WSZYSCY, SWIAT (gracze w świecie z generatorem), W_POBLIZU (blisko generatora)
+  pokazuj: SWIAT
+  # Zasięg w blokach dla trybu W_POBLIZU
+  zasieg: 64
+  # Kolor: PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE
+  kolor: GREEN
+  # Styl: PROGRESS, NOTCHED_6, NOTCHED_10, NOTCHED_12, NOTCHED_20
+  styl: NOTCHED_12
+  tytul: "<white>» Wszystkie generatory zostaną odnowione za <green><u><czas></u></green> <white>«"
+
+generator:
+  # Maksymalna liczba bloków w jednym generatorze
+  maks-rozmiar: 250000
+  # Blokuje stawianie bloków w generatorach (chroni przed nabijaniem pieniędzy)
+  # Omija to uprawnienie: generatory.stawianie
+  blokuj-stawianie: true
+
+podglad:
+  # Co ile ticków odświeżać podgląd z cząsteczek (20 ticków = 1 sekunda)
+  co-ile-tickow: 5
+  # Odstęp między cząsteczkami w blokach
+  odstep: 0.5
+  kolor-zaznaczenia: "#ff8fd8"
+  kolor-generatorow: "#55ff7f"
+  # Pokazuje obrys istniejących generatorów, gdy trzymasz różdżkę
+  pokazuj-generatory: true
+  zasieg: 96
+
+wiadomosci:
+  prefix: "<gradient:#4fe3ff:#2b8cff><b>GENERATORY</b></gradient> <dark_gray>»</dark_gray>"
+  brak-uprawnien: "<prefix> <red>Nie masz uprawnień."
+  tylko-gracz: "<prefix> <red>Ta komenda jest tylko dla graczy."
+  otrzymano-rozdzke: "<prefix> <green>Otrzymano <yellow>Różdżkę generatorów"
+  punkt-1: "<prefix> <green>Ustawiono <yellow>punkt 1 zaznaczenia <gray>(<x>, <y>, <z>)"
+  punkt-2: "<prefix> <green>Ustawiono <yellow>punkt 2 zaznaczenia <gray>(<x>, <y>, <z>)"
+  rozmiar-zaznaczenia: "<prefix> <gray>Rozmiar: <white><wymiary></white> (<white><bloki></white> bloków). Wpisz <yellow>/generator utworz [nazwa]"
+  brak-zaznaczenia: "<prefix> <red>Najpierw zaznacz obszar różdżką: <yellow>/generator rozdzka"
+  rozne-swiaty: "<prefix> <red>Oba punkty muszą być w tym samym świecie."
+  zly-format-nazwy: "<prefix> <red>Nazwa może mieć tylko litery, cyfry, _ i - (maks. 32 znaki)."
+  nazwa-zajeta: "<prefix> <red>Generator <yellow><nazwa></yellow> już istnieje."
+  za-duzy: "<prefix> <red>Obszar jest za duży: <yellow><bloki></yellow> bloków (maks. <yellow><maks></yellow>)."
+  nachodzi: "<prefix> <red>Obszar nachodzi na generator <yellow><nazwa></yellow>."
+  utworzono: "<prefix> <green>Utworzono generator <yellow><nazwa></yellow> <gray>(<wymiary>, <bloki> bloków). Ustaw jego bloki w GUI."
+  usunieto: "<prefix> <green>Usunięto generator <yellow><nazwa></yellow>."
+  nie-istnieje: "<prefix> <red>Generator <yellow><nazwa></yellow> nie istnieje."
+  przeniesiono: "<prefix> <green>Generator <yellow><nazwa></yellow> ma teraz nowy obszar <gray>(<wymiary>)."
+  wczytano-obszar: "<prefix> <green>Obszar generatora <yellow><nazwa></yellow> wczytano do zaznaczenia."
+  odnawianie-jednego: "<prefix> <green>Odnawiam generator <yellow><nazwa></yellow>..."
+  odnawianie-wszystkich: "<prefix> <green>Odnawiam wszystkie generatory..."
+  brak-blokow: "<prefix> <red>Generator <yellow><nazwa></yellow> nie ma ustawionych bloków."
+  teleport: "<prefix> <green>Przeniesiono do generatora <yellow><nazwa></yellow>."
+  swiat-niedostepny: "<prefix> <red>Świat tego generatora nie jest załadowany."
+  lista-naglowek: "<prefix> <gray>Generatory (<white><ilosc></white>):"
+  lista-pozycja: "<dark_gray> - <yellow><nazwa></yellow> <gray><swiat> <wymiary>, bloków: <bloki>"
+  lista-pusta: "<prefix> <gray>Nie ma jeszcze żadnych generatorów."
+  przeladowano: "<prefix> <green>Przeładowano konfigurację i generatory."
+  to-nie-blok: "<prefix> <red>Ten przedmiot nie jest blokiem."
+  blok-juz-jest: "<prefix> <red>Ten blok już jest w generatorze."
+  dodano-blok: "<prefix> <green>Dodano blok <yellow><blok></yellow>."
+  limit-blokow: "<prefix> <red>Generator może mieć maksymalnie <yellow><maks></yellow> różnych bloków."
+  wybierz-zamiennik: "<prefix> <gray>Kliknij blok w swoim ekwipunku, który ma zastąpić <yellow><blok></yellow>."
+  wpisz-proporcje: "<prefix> <gray>Wpisz na czacie proporcję (wagę) dla <yellow><blok></yellow>, np. <white>70</white>. Wpisz <red>anuluj</red>, aby anulować."
+  wpisz-cene: "<prefix> <gray>Wpisz na czacie cenę za wykopanie <yellow><blok></yellow>, np. <white>0.5</white>. Wpisz <red>anuluj</red>, aby anulować."
+  wpisz-xp: "<prefix> <gray>Wpisz na czacie ilość doświadczenia za wykopanie <yellow><blok></yellow>, np. <white>2</white>. Wpisz <red>anuluj</red>, aby anulować."
+  zla-liczba: "<prefix> <red>To nie jest poprawna liczba."
+  anulowano: "<prefix> <gray>Anulowano."
+  czas-minal: "<prefix> <gray>Czas na odpowiedź minął."
+  zapisano: "<prefix> <green>Zapisano."
+  stawianie-zablokowane: "<prefix> <red>Nie możesz stawiać bloków w generatorze."
+  zarobek-actionbar: "<green>+<kwota>"
+  odnowiono-actionbar: "<green>✔ Generatory zostały odnowione!"
+  pomoc:
+    - "<prefix> <gray>Komendy:"
+    - "<yellow>/generator</yellow> <gray>- otwiera menu"
+    - "<yellow>/generator rozdzka</yellow> <gray>- daje różdżkę do zaznaczania"
+    - "<yellow>/generator utworz [nazwa]</yellow> <gray>- tworzy generator z zaznaczenia"
+    - "<yellow>/generator usun [nazwa]</yellow> <gray>- usuwa generator"
+    - "<yellow>/generator edytuj [nazwa]</yellow> <gray>- otwiera edycję generatora"
+    - "<yellow>/generator lista</yellow> <gray>- lista generatorów"
+    - "<yellow>/generator odnow [nazwa]</yellow> <gray>- odnawia generator (lub wszystkie)"
+    - "<yellow>/generator tp [nazwa]</yellow> <gray>- teleport do generatora"
+    - "<yellow>/generator przeladuj</yellow> <gray>- przeładowuje konfigurację"

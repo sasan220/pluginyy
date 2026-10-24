@@ -1,0 +1,22 @@
+name: Generatory
+version: '${version}'
+main: pl.pluginyy.generatory.GeneratoryPlugin
+api-version: '1.21'
+description: Odnawiające się generatory bloków z różdżką, podglądem i GUI.
+authors: [pluginyy]
+softdepend: [Vault]
+
+commands:
+  generator:
+    description: Zarządzanie generatorami bloków
+    usage: /generator [rozdzka|utworz|usun|edytuj|lista|odnow|tp|przeladuj]
+    aliases: [generatory, gen]
+    permission: generatory.admin
+
+permissions:
+  generatory.admin:
+    description: Dostęp do komend, GUI i różdżki generatorów
+    default: op
+  generatory.stawianie:
+    description: Pozwala stawiać bloki wewnątrz generatorów
+    default: op
