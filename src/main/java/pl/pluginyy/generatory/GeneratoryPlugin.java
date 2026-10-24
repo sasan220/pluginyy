@@ -9,7 +9,7 @@ import pl.pluginyy.generatory.listener.GeneratorListener;
 import pl.pluginyy.generatory.listener.MenuListener;
 import pl.pluginyy.generatory.listener.WandListener;
 
-public final class GeneratoryPlugin extends JavaPlugin {
+public class GeneratoryPlugin extends JavaPlugin {
 
     private Messages messages;
     private Wand wand;
@@ -79,7 +79,7 @@ public final class GeneratoryPlugin extends JavaPlugin {
 
     private void closeMenus() {
         for (Player player : getServer().getOnlinePlayers()) {
-            if (player.getOpenInventory().getTopInventory().getHolder() instanceof Menu) {
+            if (Menu.openMenu(player) != null) {
                 player.closeInventory();
             }
         }

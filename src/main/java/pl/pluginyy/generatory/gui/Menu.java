@@ -61,6 +61,12 @@ public abstract class Menu implements InventoryHolder {
         this.plugin = plugin;
     }
 
+    /** GUI tego pluginu otwarte przez gracza albo null. */
+    public static Menu openMenu(Player player) {
+        Inventory top = player.getOpenInventory().getTopInventory();
+        return top != null && top.getHolder() instanceof Menu menu ? menu : null;
+    }
+
     protected abstract Component title();
 
     protected abstract void build(Player viewer);

@@ -35,7 +35,7 @@ public final class MenuListener implements Listener {
         boolean inMenu = event.getRawSlot() < top.getSize();
         // Akcje (otwieranie innych GUI, zamykanie) wykonujemy w następnym ticku – tak zaleca Bukkit
         Bukkit.getScheduler().runTask(plugin, () -> {
-            if (player.getOpenInventory().getTopInventory().getHolder() != menu) {
+            if (Menu.openMenu(player) != menu) {
                 return; // gracz zdążył zamknąć GUI
             }
             if (inMenu) {

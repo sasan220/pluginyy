@@ -1,4 +1,4 @@
-# Generatory – plugin do Minecrafta (Paper 1.21+)
+# Generatory – plugin do Minecrafta (Paper 1.21.4+)
 
 Odnawiające się generatory bloków, np. pod SkyPvP. Zaznaczasz obszar różdżką, tworzysz generator jedną komendą, a bloki, proporcje i ceny ustawiasz w GUI.
 
@@ -18,7 +18,7 @@ Odnawiające się generatory bloków, np. pod SkyPvP. Zaznaczasz obszar różdż
 ## Instalacja
 
 1. Pobierz `Generatory-1.0.0.jar`: zakładka **Actions** → najnowszy przebieg **Build** → artefakt **Generatory**.
-2. Wrzuć plik do folderu `plugins/` na serwerze **Paper 1.21+** (albo Purpur lub innym forku Papera).
+2. Wrzuć plik do folderu `plugins/` na serwerze **Paper 1.21.4 lub nowszym** (albo Purpur lub innym forku Papera).
 3. Zrestartuj serwer.
 4. Opcjonalnie: jeśli ceny mają wypłacać pieniądze, zainstaluj **Vault** i plugin ekonomii, np. **EssentialsX**.
 
